@@ -2,8 +2,7 @@
 
 namespace Database\Factories\Infrastructure\Laravel\Models;
 
-use App\Domain\Shared\ValueObjects\Id;
-use App\Infrastructure\Laravel\Models\TypeDocument;
+use App\Domain\User\ValueObjects\Id;
 use App\Infrastructure\Laravel\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Facades\Hash;
