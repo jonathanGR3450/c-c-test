@@ -16,7 +16,7 @@ class RegisterFormRequest extends CustomFormRequest
         return [
             'name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255|unique:users,email,' . $this->id,
             'password' => 'required|string|min:6|confirmed',
             'identification' => 'required|numeric',
             'cell_phone' => 'required|numeric',

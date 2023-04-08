@@ -4,6 +4,7 @@ namespace App\UserInterface\Controller\User;
 
 use App\Application\User\CreateUserUseCase;
 use App\Infrastructure\Laravel\Controller;
+use App\UserInterface\Requests\Auth\RegisterFormRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Http\JsonResponse;
@@ -21,7 +22,7 @@ class CreateUserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request)
+    public function __invoke(RegisterFormRequest $request)
     {
         $user = $this->createUserUsercase->__invoke(
             $request->input('name'),

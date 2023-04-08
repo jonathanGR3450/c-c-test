@@ -38,4 +38,10 @@ Route::middleware(['jwt.verify'])->group(function ()
     Route::delete('users/{id}', 'User\DestroyUserController')->name('users.destroy');
     Route::get('users', 'User\IndexUserController')->name('users.index');
 
+    Route::post('blogs', 'Blog\CreateBlogController')->name('blogs.store');
+    Route::put('blogs/{id}', 'Blog\UpdateBlogController')->name('blogs.update');
+    Route::get('blogs/{id}', 'Blog\ShowBlogController')->name('blogs.show');
+    Route::delete('blogs/{id}', 'Blog\DestroyBlogController')->name('blogs.destroy');
+
 });
+Route::get('blogs', 'Blog\IndexBlogController')->name('blogs.index');
