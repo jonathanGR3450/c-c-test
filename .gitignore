@@ -16,4 +16,4 @@
 /backend/.fleet
 /backend/.idea
 /backend/.vscode
-/backend/./pgdata
+/backend/pgdata

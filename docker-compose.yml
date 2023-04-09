@@ -52,6 +52,19 @@ services:
     networks:
       - ddd-network
 
+  front:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    ports:
+      - 4200:4200
+    container_name: app-front
+    volumes:
+       - ./front:/app
+       - /app/node_modules
+    networks:
+      - ddd-network
+
 #Docker Networks
 networks:
   ddd-network:
