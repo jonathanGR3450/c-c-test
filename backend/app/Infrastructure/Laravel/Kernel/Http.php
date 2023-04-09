@@ -68,5 +68,6 @@ class Http extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'jwt.verify' => \App\Infrastructure\Laravel\Middleware\JwtMiddleware::class,
+        'guest' => \App\Infrastructure\Laravel\Middleware\CORS::class,
     ];
 }

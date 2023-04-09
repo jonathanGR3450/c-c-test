@@ -90,7 +90,12 @@ class AuthController extends Controller
     public function getAuthenticatedUser()
     {
         $user = $this->authUserInterface->getAuthUser();
-        return response()->json(compact('user'));
+        return response()->json(
+            [
+                'status' => 'success',
+                'message' => 'Get user Logged successful',
+                'data' => $user
+            ]);
     }
 
     public function refresh()

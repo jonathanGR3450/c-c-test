@@ -79,7 +79,7 @@ class BlogRepository implements BlogRepositoryInterface
         $blogModel = new ModelsBlog();
 
         if (!empty($criteria->userId())) {
-            $blogModel = $blogModel->where('user_id', 'ILIKE', "%" . $criteria->userId() . "%");
+            $blogModel = $blogModel->where('user_id', '=', "" . $criteria->userId() . "");
         }
 
         if (!empty($criteria->name())) {
